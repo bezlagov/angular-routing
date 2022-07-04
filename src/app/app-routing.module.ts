@@ -1,10 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path:'',
+  loadChildren:()=>import("./first/first.module").then(mod=>mod.FirstModule)
+  },
+  {path:'',
+  loadChildren:()=>import("./second/second.module").then(mod=>mod.SecondModule)
+  }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  // data in RouterModule.forRoot is for lazy loading for task2
+  imports: [RouterModule.forRoot([])],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
