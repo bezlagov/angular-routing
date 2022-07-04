@@ -12,7 +12,7 @@ const routes: Routes = [
 
 @NgModule({
   // data in RouterModule.forRoot is for lazy loading for task2
-  imports: [RouterModule.forRoot([])],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
